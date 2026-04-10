@@ -30,11 +30,11 @@ jobs:
       - name: Fetch upstream
         run: git fetch upstream
 
-      - name: Sync
+      - name: Sync (safe merge instead of rebase)
         run: |
           git checkout main
-          git pull upstream main --rebase
+          git merge upstream/main
 
-      - name: Push
+      - name: Push safely
         run: |
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} main
+          git push origin main
