@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mario-pod
+spec: 
+  containers:
+  - name: mario-container
+    image: pengbai/docker-supermario

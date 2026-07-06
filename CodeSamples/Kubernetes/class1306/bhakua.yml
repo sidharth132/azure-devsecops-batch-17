@@ -1,10 +1,7 @@
 apiVersion: v1
-
 kind: Pod
-
 metadata:
   name: bhakua-pod
-
 spec: 
   containers: 
     - name: sudarshan-nginx
