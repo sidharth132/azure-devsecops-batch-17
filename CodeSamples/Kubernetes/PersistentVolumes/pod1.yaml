@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx1
+  labels:
+    app.kubernetes.io/name: nginx
+spec:
+  volumes:
+  - name: dimple-volume
+    persistentVolumeClaim: 
+      claimName: dimple-pvc
+  containers:
+  - name: nginx
+    volumeMounts:
+    - name: dimple-volume
+      mountPath: /usr/share/nginx/html
+    image: nginx
+    ports:
+      - containerPort: 80
