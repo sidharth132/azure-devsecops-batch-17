@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: axionui-4
+  labels:
+    industry: petroleum-refinery
+spec:
+  containers:
+  - name: axionui
+    image: devopsinsiders/axion-ui
+    ports:
+      - containerPort: 80
