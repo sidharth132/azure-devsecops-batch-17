@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: axionui-service
-spec: 
-  type: LoadBalancer
+  name: nginx
+spec:
+  type: ClusterIP
   selector:
-    industry: petroleum-refinery
+    brand: gucci
   ports:
-  - port: 8080
+  - port: 11111
     targetPort: 80
