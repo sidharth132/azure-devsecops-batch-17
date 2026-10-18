@@ -1,0 +1,4 @@
+port: 80
+image: nginx
+name: nginx-prod
+namespace: app-prod
